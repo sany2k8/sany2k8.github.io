@@ -1,5 +1,0 @@
-name: Md. Sany Ahmed, Always Sany
-markdown: kramdown
-
-theme: jekyll-theme-merlot
-permalink: /blog/:year/:month/:day/:title
