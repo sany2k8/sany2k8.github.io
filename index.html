@@ -89,7 +89,12 @@
 </head>
 
 <body>
+	<div id="scroll-progress"></div>
+	<button id="back-to-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></button>
 	<header id="header" class="header-tops">
+		<div class="hero-blobs" aria-hidden="true">
+			<span></span><span></span><span></span>
+		</div>
 		<div class="container">
 			<h1><a href="index.html">Sany Ahmed</a></h1>
 			<h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
@@ -116,6 +121,11 @@
 				<a href="https://leetcode.com/sany2k8dev/" target="_blank" class="leetcode"><i
 						class="bx bx-code"></i></a>
 				<a href="mailto:sany2k8@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+			</div>
+
+			<div class="hero-cta">
+				<a href="#portfolio" class="btn-primary-cta"><i class="bx bx-briefcase-alt-2"></i> View Projects</a>
+				<a href="#contacts" class="btn-ghost-cta"><i class="bx bx-envelope"></i> Get in Touch</a>
 			</div>
 
 		</div>
@@ -504,164 +514,183 @@
 			<div class="row portfolio-container" id="projects-container">
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-					<center>
-						<h4>99 Names of Allah — 3D Galaxy</h4>
-					</center>
-					<div class="portfolio-wrap">
-						<img src="assets/img/project/vdg.jpg" class="img-fluid" alt="99 Names of Allah 3D Galaxy">
-						<div class="portfolio-info">
-
-							<div class="portfolio-links">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/vdg.jpg" alt="99 Names of Allah 3D Galaxy">
+							<span class="project-cat">Web</span>
+						</div>
+						<div class="project-body">
+							<h4>99 Names of Allah — 3D Galaxy</h4>
+							<p>An immersive WebGL galaxy of the 99 names with audio, AI reflections and progress tracking.</p>
+							<div class="project-tags"><span>React</span><span>Three.js</span><span>WebGL</span></div>
+							<div class="project-actions">
 								<a href="projects/99-names-galaxy.html" data-gall="portfolioDetailsGallery"
 									data-vbtype="iframe" class="venobox" title="Project Details"><i
-										class="bx bx-info-circle"></i></a>
+										class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/sany2k8/99-names-of-allah-3d-galaxy" target="_blank"
-									title="GitHub Repository"><i class="bx bxl-github"></i></a>
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-					<center>
-						<h4>Resume Intelligence Platform</h4>
-					</center>
-					<div class="portfolio-wrap">
-						<img src="assets/img/project/resume.jpg" class="img-fluid" alt="Resume Intelligence Platform">
-						<div class="portfolio-info">
-
-							<div class="portfolio-links">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/resume.jpg" alt="Resume Intelligence Platform">
+							<span class="project-cat">AI / ML</span>
+						</div>
+						<div class="project-body">
+							<h4>Resume Intelligence Platform</h4>
+							<p>AI hiring tool that parses résumés and ranks candidates with semantic scoring and skill matching.</p>
+							<div class="project-tags"><span>FastAPI</span><span>spaCy</span><span>React</span></div>
+							<div class="project-actions">
 								<a href="projects/resume-intelligence.html" data-gall="portfolioDetailsGallery"
 									data-vbtype="iframe" class="venobox" title="Project Details"><i
-										class="bx bx-info-circle"></i></a>
+										class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/sany2k8/resume-intelligence-platform" target="_blank"
-									title="GitHub Repository"><i class="bx bxl-github"></i></a>
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-					<center>
-						<h4>ReelRoom Movie App</h4>
-					</center>
-					<div class="portfolio-wrap">
-						<img src="assets/img/project/musicplayer.jpg" class="img-fluid" alt="ReelRoom Movie App">
-						<div class="portfolio-info">
-
-							<div class="portfolio-links">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/musicplayer.jpg" alt="ReelRoom Movie App">
+							<span class="project-cat">Web</span>
+						</div>
+						<div class="project-body">
+							<h4>ReelRoom Movie App</h4>
+							<p>A private, PIN-gated movie &amp; series streaming app for a single household.</p>
+							<div class="project-tags"><span>React</span><span>Express</span><span>SQLite</span></div>
+							<div class="project-actions">
 								<a href="projects/reelroom.html" data-gall="portfolioDetailsGallery"
 									data-vbtype="iframe" class="venobox" title="Project Details"><i
-										class="bx bx-info-circle"></i></a>
+										class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/sany2k8/reelroom-movie-app" target="_blank"
-									title="GitHub Repository"><i class="bx bxl-github"></i></a>
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
-					<center>
-						<h4>Suncloud Labs Platform</h4>
-					</center>
-					<div class="portfolio-wrap">
-						<img src="assets/img/project/gan.jpg" class="img-fluid" alt="Suncloud Labs Platform">
-						<div class="portfolio-info">
-
-							<div class="portfolio-links">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/gan.jpg" alt="Suncloud Labs Platform">
+							<span class="project-cat">Web</span>
+						</div>
+						<div class="project-body">
+							<h4>Suncloud Labs Platform</h4>
+							<p>KodeKloud-style sandboxed Docker labs graded by server-side validation.</p>
+							<div class="project-tags"><span>FastAPI</span><span>React</span><span>Docker</span></div>
+							<div class="project-actions">
 								<a href="projects/suncloud.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"
-									class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+									class="venobox" title="Project Details"><i class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/sany2k8/suncloud" target="_blank"
-									title="GitHub Repository"><i class="bx bxl-github"></i></a>
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-backend">
-					<center>
-						<h4>Places Finder (PostGIS)</h4>
-					</center>
-					<div class="portfolio-wrap">
-						<img src="assets/img/project/iras.jpeg" class="img-fluid" alt="Places Finder with PostGIS">
-						<div class="portfolio-info">
-
-							<div class="portfolio-links">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/iras.jpeg" alt="Places Finder with PostGIS">
+							<span class="project-cat">Backend</span>
+						</div>
+						<div class="project-body">
+							<h4>Places Finder (PostGIS)</h4>
+							<p>Map-based POI search with A* routing over the Bangladesh OSM road network.</p>
+							<div class="project-tags"><span>FastAPI</span><span>PostGIS</span><span>Leaflet</span></div>
+							<div class="project-actions">
 								<a href="projects/places-finder.html" data-gall="portfolioDetailsGallery"
 									data-vbtype="iframe" class="venobox" title="Project Details"><i
-										class="bx bx-info-circle"></i></a>
+										class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/sany2k8/fastapi-with-postgis" target="_blank"
-									title="GitHub Repository"><i class="bx bxl-github"></i></a>
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-					<center>
-						<h4>Multimodal Product Recommender</h4>
-					</center>
-					<div class="portfolio-wrap">
-						<img src="assets/img/project/recommender.jpg" class="img-fluid" alt="Multimodal Product Recommender">
-						<div class="portfolio-info">
-
-							<div class="portfolio-links">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/recommender.jpg" alt="Multimodal Product Recommender">
+							<span class="project-cat">AI / ML</span>
+						</div>
+						<div class="project-body">
+							<h4>Multimodal Product Recommender</h4>
+							<p>Text + image similarity search on pgvector with pluggable embedding providers.</p>
+							<div class="project-tags"><span>FastAPI</span><span>pgvector</span><span>React</span></div>
+							<div class="project-actions">
 								<a href="projects/vector-recommendation.html" data-gall="portfolioDetailsGallery"
 									data-vbtype="iframe" class="venobox" title="Project Details"><i
-										class="bx bx-info-circle"></i></a>
+										class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/sany2k8/fastapi-vector-recommendation" target="_blank"
-									title="GitHub Repository"><i class="bx bxl-github"></i></a>
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 portfolio-item filter-backend">
-					<!-- <br> -->
-					<center>
-						<h4>Elasticsearch to Postgres</h4>
-					</center>
-					<div class="portfolio-wrap">
-						<img src="assets/img/project/twitteranalysis.jpg" class="img-fluid" alt="Elasticsearch to Postgres">
-						<div class="portfolio-info">
-							<div class="portfolio-links">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/twitteranalysis.jpg" alt="Elasticsearch to Postgres">
+							<span class="project-cat">Backend</span>
+						</div>
+						<div class="project-body">
+							<h4>Elasticsearch to Postgres</h4>
+							<p>PoCs replacing Elasticsearch with Postgres for BM25 full-text and PostGIS geo search.</p>
+							<div class="project-tags"><span>FastAPI</span><span>pg_search</span><span>PostGIS</span></div>
+							<div class="project-actions">
 								<a href="projects/es-to-postgres.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"
-									class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+									class="venobox" title="Project Details"><i class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/sany2k8/from-elasticsearch-to-postgres" target="_blank"
-									title="GitHub Repository"><i class="bx bxl-github"></i></a>
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-					<center>
-						<h4>FastAPI RAG Chatbot</h4>
-					</center>
-					<div class="portfolio-wrap">
-						<img src="assets/img/project/ml.jpg" class="img-fluid" alt="FastAPI RAG Chatbot">
-						<div class="portfolio-info">
-							<div class="portfolio-links">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/ml.jpg" alt="FastAPI RAG Chatbot">
+							<span class="project-cat">AI / ML</span>
+						</div>
+						<div class="project-body">
+							<h4>FastAPI RAG Chatbot</h4>
+							<p>Retrieval-Augmented Generation document Q&amp;A grounded in your own data.</p>
+							<div class="project-tags"><span>FastAPI</span><span>LLM</span><span>Vector DB</span></div>
+							<div class="project-actions">
 								<a href="projects/fastapi-rag.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"
-									class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+									class="venobox" title="Project Details"><i class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/sany2k8/fastapi-with-rag" target="_blank"
-									title="GitHub Repository"><i class="bx bxl-github"></i></a>
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-lg-4 col-md-6 portfolio-item filter-backend">
-					<!-- <br> -->
-					<center>
-						<h4>DeepL Translation with MCP</h4>
-					</center>
-					<div class="portfolio-wrap">
-						<img src="assets/img/project/mcp.jpg" class="img-fluid" alt="DeepL FastMCP Python Server">
-						<div class="portfolio-info">
-							<div class="portfolio-links">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/mcp.jpg" alt="DeepL FastMCP Python Server">
+							<span class="project-cat">Backend</span>
+						</div>
+						<div class="project-body">
+							<h4>DeepL Translation with MCP</h4>
+							<p>An MCP server exposing DeepL translation as tools any AI assistant can call.</p>
+							<div class="project-tags"><span>Python</span><span>FastMCP</span><span>DeepL</span></div>
+							<div class="project-actions">
 								<a href="projects/deepl-mcp.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"
-									class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+									class="venobox" title="Project Details"><i class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/AlwaysSany/deepl-fastmcp-python-server" target="_blank"
-									title="GitHub Repository"><i class="bx bxl-github"></i></a>
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>
 					</div>

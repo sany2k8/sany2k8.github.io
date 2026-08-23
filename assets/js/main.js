@@ -318,4 +318,33 @@
     // Add any scroll-based animations here
   }, 16)); // ~60fps
 
+  // Hero CTA buttons reuse the SPA section navigation
+  $(document).on('click', '.hero-cta a[href^="#"]', function(e) {
+    e.preventDefault();
+    var hash = $(this).attr('href');
+    var $navLink = $('.nav-menu a[href="' + hash + '"]').first();
+    if ($navLink.length) {
+      $navLink.trigger('click');
+    }
+  });
+
+  // Scroll progress bar + back-to-top button
+  function updateScrollUI() {
+    var scrolled = $(window).scrollTop();
+    var docHeight = $(document).height() - $(window).height();
+    var pct = docHeight > 0 ? (scrolled / docHeight) * 100 : 0;
+    $('#scroll-progress').css('width', pct + '%');
+    if (scrolled > 300) {
+      $('#back-to-top').addClass('show');
+    } else {
+      $('#back-to-top').removeClass('show');
+    }
+  }
+  $(window).on('scroll', debounce(updateScrollUI, 10));
+  updateScrollUI();
+
+  $('#back-to-top').on('click', function() {
+    $('html, body').animate({ scrollTop: 0 }, 600, 'easeInOutQuart');
+  });
+
 })(jQuery);
