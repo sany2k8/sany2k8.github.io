@@ -209,13 +209,19 @@
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
+      // Only filter the projects grid, not the certification grid
+      var selectedFilter = $(this).data('filter');
+      $('#projects-container').isotope({
+        filter: selectedFilter
       });
 
-      // Add stagger animation to filtered items
+      // Stagger-animate ONLY the matching cards; clear the class from the rest
+      // so the fade-in animation never overrides isotope's hidden state.
       setTimeout(() => {
-        $('.portfolio-item').each(function(index) {
+        var $all = $('#projects-container .portfolio-item');
+        $all.removeClass('fade-in-up');
+        var $matching = selectedFilter === '*' ? $all : $all.filter(selectedFilter);
+        $matching.each(function(index) {
           $(this).css('animation-delay', (index * 0.1) + 's');
           $(this).addClass('fade-in-up');
         });
@@ -231,6 +237,8 @@
       closeBackground: '#60a5fa',
       closeColor: '#ffffff',
       border: '0px',
+      framewidth: '760px',
+      frameheight: '440px',
       spinner: 'three-bounce',
       spinColor: '#60a5fa'
     });
