@@ -65,25 +65,11 @@
 			vertical-align: middle;
 		}
 
-		/* Clear, always-visible close button on project popups */
+		/* Hide venobox's own corner close — the in-popup .popup-close button
+		   (injected into each detail page) is the single, clearly-placed close icon.
+		   It still triggers this element's click() to actually close the popup. */
 		.vbox-close {
-			top: 18px !important;
-			right: 18px !important;
-			width: 46px !important;
-			height: 46px !important;
-			padding: 0 !important;
-			border-radius: 50% !important;
-			font-size: 30px !important;
-			line-height: 46px !important;
-			text-align: center !important;
-			background-color: #60a5fa !important;
-			color: #fff !important;
-			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
-			transition: background-color 0.2s ease, transform 0.2s ease !important;
-		}
-		.vbox-close:hover {
-			background-color: #3b82f6 !important;
-			transform: scale(1.08) !important;
+			display: none !important;
 		}
 	</style>
 </head>
@@ -690,6 +676,69 @@
 								<a href="projects/deepl-mcp.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe"
 									class="venobox" title="Project Details"><i class="bx bx-info-circle"></i> Details</a>
 								<a href="https://github.com/AlwaysSany/deepl-fastmcp-python-server" target="_blank"
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/blog.jpg" alt="Kafka Zero to Hero">
+							<span class="project-cat">Backend</span>
+						</div>
+						<div class="project-body">
+							<h4>Kafka Zero to Hero</h4>
+							<p>Hands-on Kafka lab: event-driven fan-out, stream processing and event sourcing on an order pipeline.</p>
+							<div class="project-tags"><span>Kafka</span><span>FastAPI</span><span>Python</span></div>
+							<div class="project-actions">
+								<a href="projects/kafka-zero-to-hero.html" data-gall="portfolioDetailsGallery"
+									data-vbtype="iframe" class="venobox" title="Project Details"><i
+										class="bx bx-info-circle"></i> Details</a>
+								<a href="https://github.com/sany2k8/kafka-zero-to-hero" target="_blank"
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/todo.jpg" alt="gRPC Zero to Hero">
+							<span class="project-cat">Backend</span>
+						</div>
+						<div class="project-body">
+							<h4>gRPC Zero to Hero</h4>
+							<p>End-to-end gRPC patterns — all four RPC types, interceptors, TLS, load balancing and health checks.</p>
+							<div class="project-tags"><span>gRPC</span><span>Python</span><span>Protobuf</span></div>
+							<div class="project-actions">
+								<a href="projects/grpc-zero-to-hero.html" data-gall="portfolioDetailsGallery"
+									data-vbtype="iframe" class="venobox" title="Project Details"><i
+										class="bx bx-info-circle"></i> Details</a>
+								<a href="https://github.com/sany2k8/grpc-zero-to-hero" target="_blank"
+									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+					<div class="project-card">
+						<div class="project-thumb">
+							<img src="assets/img/project/recommender.jpg" alt="Movie Recommender">
+							<span class="project-cat">AI / ML</span>
+						</div>
+						<div class="project-body">
+							<h4>Movie Recommender</h4>
+							<p>A movie recommendation engine that suggests titles from user preferences and ratings.</p>
+							<div class="project-tags"><span>Python</span><span>ML</span><span>Recommender</span></div>
+							<div class="project-actions">
+								<a href="projects/movie-recommender.html" data-gall="portfolioDetailsGallery"
+									data-vbtype="iframe" class="venobox" title="Project Details"><i
+										class="bx bx-info-circle"></i> Details</a>
+								<a href="https://github.com/sany2k8/movie-recommender" target="_blank"
 									class="btn-code" title="GitHub Repository"><i class="bx bxl-github"></i> Code</a>
 							</div>
 						</div>

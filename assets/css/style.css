@@ -1111,6 +1111,30 @@ section .container {
   animation: fadeInUp 0.6s ease forwards;
 }
 
+/* Close button inside project-detail popups (venobox iframe) */
+.popup-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: #60a5fa;
+  color: #fff;
+  font-size: 28px;
+  line-height: 44px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100000;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.popup-close:hover {
+  background-color: #3b82f6;
+  transform: scale(1.08);
+}
+
 /* Scroll animations */
 .scroll-animate {
   opacity: 0;

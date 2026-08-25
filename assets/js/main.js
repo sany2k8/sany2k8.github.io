@@ -6,6 +6,41 @@
 !(function($) {
   "use strict";
 
+  // Inject a close button inside project-detail popups (shown in the venobox iframe)
+  // so there is always a clear "×" at the top-right of the popup itself.
+  (function injectPopupClose() {
+    if (!document.getElementById('portfolio-details')) return; // detail pages only
+    if (window.self === window.top) return; // only when embedded in the venobox iframe
+    var add = function() {
+      if (document.querySelector('.popup-close')) return;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'popup-close';
+      btn.setAttribute('aria-label', 'Close');
+      btn.innerHTML = '&times;';
+      btn.addEventListener('click', function() {
+        try {
+          var pdoc = window.parent.document;
+          // Preferred: let venobox close itself.
+          var vc = pdoc.querySelector('.vbox-close');
+          if (vc) { vc.click(); }
+          // Fallback: if the overlay is still there shortly after, force it closed.
+          setTimeout(function() {
+            var ov = pdoc.querySelector('.vbox-overlay');
+            if (ov && ov.parentNode) { ov.parentNode.removeChild(ov); }
+            pdoc.body.classList.remove('vbox-open');
+          }, 60);
+          return;
+        } catch (e) { /* cross-origin fallback */ }
+        window.history.length > 1 ? window.history.back() : window.close();
+      });
+      document.body.appendChild(btn);
+    };
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', add)
+      : add();
+  })();
+
   // Smooth scrolling animation
   function smoothScrollTo(target) {
     $('html, body').animate({
@@ -238,7 +273,7 @@
       closeColor: '#ffffff',
       border: '0px',
       framewidth: '760px',
-      frameheight: '440px',
+      frameheight: '560px',
       spinner: 'three-bounce',
       spinColor: '#60a5fa'
     });
