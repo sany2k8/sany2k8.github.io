@@ -1135,6 +1135,20 @@ section .container {
   transform: scale(1.08);
 }
 
+/* Hide the scrollbar inside project-detail popups only (content still scrolls if needed).
+   Scoped to .vb-embedded so the main page keeps its normal scrollbar. */
+html.vb-embedded,
+html.vb-embedded body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+html.vb-embedded::-webkit-scrollbar,
+html.vb-embedded body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none; /* Chrome/Safari */
+}
+
 /* Scroll animations */
 .scroll-animate {
   opacity: 0;

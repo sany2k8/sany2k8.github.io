@@ -11,6 +11,8 @@
   (function injectPopupClose() {
     if (!document.getElementById('portfolio-details')) return; // detail pages only
     if (window.self === window.top) return; // only when embedded in the venobox iframe
+    // Mark the embedded document so we can hide its scrollbar (popup only).
+    document.documentElement.classList.add('vb-embedded');
     var add = function() {
       if (document.querySelector('.popup-close')) return;
       var btn = document.createElement('button');
