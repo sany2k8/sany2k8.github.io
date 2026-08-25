@@ -20,21 +20,22 @@
       btn.className = 'popup-close';
       btn.setAttribute('aria-label', 'Close');
       btn.innerHTML = '&times;';
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function(ev) {
+        ev.preventDefault();
+        // Close the venobox overlay in the parent WITHOUT any navigation.
         try {
           var pdoc = window.parent.document;
-          // Preferred: let venobox close itself.
           var vc = pdoc.querySelector('.vbox-close');
           if (vc) { vc.click(); }
-          // Fallback: if the overlay is still there shortly after, force it closed.
+          // Hard fallback: remove the overlay directly if it lingers.
           setTimeout(function() {
             var ov = pdoc.querySelector('.vbox-overlay');
             if (ov && ov.parentNode) { ov.parentNode.removeChild(ov); }
-            pdoc.body.classList.remove('vbox-open');
+            if (pdoc.body) { pdoc.body.classList.remove('vbox-open'); }
           }, 60);
-          return;
-        } catch (e) { /* cross-origin fallback */ }
-        window.history.length > 1 ? window.history.back() : window.close();
+        } catch (e) {
+          /* same-origin, so this should not happen; never navigate away */
+        }
       });
       document.body.appendChild(btn);
     };
@@ -382,6 +383,20 @@
 
   $('#back-to-top').on('click', function() {
     $('html, body').animate({ scrollTop: 0 }, 600, 'easeInOutQuart');
+  });
+
+  // Resume section toolbar
+  $(document).on('click', '#resumeBackBtn', function(e) {
+    e.preventDefault();
+    // Return to the home hero (same as clicking the Home nav item)
+    $('#header').removeClass('header-top');
+    $('section').removeClass('section-show');
+    $('.nav-menu .active, .mobile-nav .active').removeClass('active');
+    $('.nav-menu a[href="#header"]').closest('li').addClass('active');
+    $('html, body').animate({ scrollTop: 0 }, 400);
+  });
+  $(document).on('click', '#resumePrintBtn', function() {
+    window.print();
   });
 
 })(jQuery);

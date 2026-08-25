@@ -24,7 +24,7 @@
 	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 	<link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 	<!-- Template Main CSS File -->
-	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/style.css?v=20260825" rel="stylesheet">
 
 	<!-- Section tweaks: equal education cards + skills grid -->
 	<style>
@@ -65,6 +65,32 @@
 			vertical-align: middle;
 		}
 
+		/* Hero: professional headline + value proposition */
+		#header .hero-headline {
+			color: #fff;
+			font-weight: 700;
+			font-size: clamp(1.0rem, 1.7vw, 1.8rem);
+			margin: 8px 0 6px;
+			line-height: 1.2;
+		}
+		#header .hero-typing-line {
+			color: #cbd5e1;
+			font-size: clamp(1rem, 2.4vw, 1.35rem);
+			margin: 0 0 14px;
+			font-weight: 500;
+		}
+		#header .hero-tagline {
+			color: #94a3b8;
+			max-width: 640px;
+			margin: 0 0 22px;
+			font-size: clamp(0.95rem, 2vw, 1.05rem);
+			line-height: 1.6;
+		}
+		#header .hero-cta {
+			flex-wrap: wrap;
+			gap: 12px;
+		}
+
 		/* Hide venobox's own corner close — the in-popup .popup-close button
 		   (injected into each detail page) is the single, clearly-placed close icon.
 		   It still triggers this element's click() to actually close the popup. */
@@ -95,7 +121,10 @@
 		</div>
 		<div class="container">
 			<h1><a href="index.html">Sany Ahmed</a></h1>
-			<h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
+			<h4 class="hero-headline">Senior Backend Engineer</h4>
+			<p class="hero-typing-line">Building <span class="typing" style="color:#12D640"></span></p>
+			<!-- <p class="hero-tagline">10+ years designing scalable backend systems, cloud infrastructure, and
+				distributed applications — turning complex requirements into reliable, high-performance services.</p> -->
 			<nav class="nav-menu d-none d-lg-block">
 				<ul>
 					<li class="active"><a href="#header"> <span>Home</span></a></li>
@@ -104,6 +133,7 @@
 					<li><a href="#experience"> <span>Experience</span></a></li>
 					<li><a href="#portfolio"> <span>Projects</span></a></li>
 					<li><a href="#skills"> <span>Skills</span></a></li>
+					<li><a href="#resume"> <span>Resume</span></a></li>
 					<li><a href="#contacts"> <span>Contact</span></a></li>
 
 				</ul>
@@ -122,7 +152,8 @@
 			</div>
 
 			<div class="hero-cta">
-				<a href="#portfolio" class="btn-primary-cta"><i class="bx bx-briefcase-alt-2"></i> View Projects</a>
+				<a href="#portfolio" class="btn-primary-cta"><i class="bx bx-briefcase-alt-2"></i> View My Work</a>
+				<a href="#resume" class="btn-ghost-cta"><i class="bx bx-file"></i> View Resume</a>
 				<a href="#contacts" class="btn-ghost-cta"><i class="bx bx-envelope"></i> Get in Touch</a>
 			</div>
 
@@ -439,10 +470,19 @@
 			<div class="row">
 				<div class="col-lg-12" data-aos="fade-up">
 					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-						<h4 style="text-align:left;"><a href="https://reformedtech.org/"
-								style="color:#12d640">ReformedTech</a><br> </h4>
-						<h5 style="text-align:left;">May 2021 - Present</h5>
-						<p style="text-align:left;color:#fff"><em>Lead Software Developer</em></p>
+						<h4 style="text-align:left;"><span style="color:#12d640">Bitsware Ltd</span><br> </h4>
+						<h5 style="text-align:left;">August 2025 - Present</h5>
+						<p style="text-align:left;color:#fff"><em>Software Engineer L4 — Backend</em></p>
+						<ul style="text-align:left;">
+							<li>Developed and maintained <strong>Python</strong>-based <strong>cron jobs</strong> and <strong>batch-processing</strong> workflows, using <strong>Quartz</strong> and <strong>BOB Monitor</strong> for <strong>job monitoring</strong> and operational <strong>troubleshooting</strong>.</li>
+							<li>Performed <strong>data migration</strong> and processing with <strong>Impala</strong>, <strong>Hadoop</strong>, <strong>Hue</strong>, and <strong>Python</strong> scripts, including <strong>data transformation</strong> and <strong>validation</strong>.</li>
+							<li class="tech-stack"><strong>Tech Stack</strong>: <strong>Python</strong>, <strong>Flask</strong>, <strong>Oracle</strong>, <strong>SQL</strong>, <strong>Impala</strong>, <strong>Hadoop</strong>, <strong>Hue</strong>, <strong>BOB Monitor</strong>, <strong>Cron Jobs</strong>, <strong>Data Migration</strong>.</li>
+						</ul>
+					</div>
+					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+						<h4 style="text-align:left;"><span style="color:#12d640">Safara (formerly Skipper)</span><br> </h4>
+						<h5 style="text-align:left;">May 2021 - July 2025</h5>
+						<p style="text-align:left;color:#fff"><em>Senior Software Engineer — Backend</em></p>
 						<ul style="text-align:left;">
 							<li>Architected and delivered a feature-rich <strong>Content Management System (CMS)</strong> using <strong>Django</strong> and <strong>GraphQL</strong>, optimized <strong>data models</strong> and <strong>query performance</strong>, ensuring efficient <strong>content management</strong> and faster <strong>data retrieval</strong> while supporting future <strong>scalability</strong>.</li>
 							<li>Designed and implemented multiple <strong>microservices</strong> and <strong>RESTful APIs</strong> for booking widgets, enabling <strong>real-time</strong>, <strong>dynamic content delivery</strong> to thousands of users and improving <strong>system responsiveness</strong>.</li>
@@ -458,7 +498,7 @@
 					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
 						<h4 style="text-align:left;"><a href="https://w3engineers.com/" style="color:#12d640">W3
 								Engineers Ltd.</a><br> </h4>
-						<h5 style="text-align:left;">Jan 2014 - Feb 2021</h5>
+						<h5 style="text-align:left;">Jan 2014 - Mar 2021</h5>
 						<p style="text-align:left;color:#fff"><em>Senior Software Engineer</em></p>
 						<ul style="text-align:left;">
 							<li>Core developer and maintainer of <strong>OZ</strong>, a high-volume <strong>backend analytics system</strong> managing millions of <strong>user interactions</strong>, <strong>inventories</strong>, <strong>transactions</strong>, <strong>ad revenue</strong>, and <strong>spend</strong> for <strong>17+ major vacation rental brands</strong> — delivered reliable, <strong>data-driven insights</strong> while optimizing <strong>system performance</strong> and <strong>storage costs</strong>.</li>
@@ -502,20 +542,22 @@
 				<div class="col-lg-12 d-flex justify-content-center">
 					<ul id="portfolio-flters">
 						<li data-filter="*" class="filter-active">All</li>
-						<li data-filter=".filter-web">Web</li>
-						<li data-filter=".filter-ai">AI / ML</li>
-						<li data-filter=".filter-backend">Backend / Data</li>
+						<li data-filter=".filter-backend">Backend</li>
+						<li data-filter=".filter-fullstack">Full Stack</li>
+						<li data-filter=".filter-ai">AI / RAG</li>
+						<li data-filter=".filter-cloud">Cloud &amp; DevOps</li>
+						<li data-filter=".filter-data">Data Engineering</li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="row portfolio-container" id="projects-container">
 
-				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-fullstack">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/vdg.jpg" alt="99 Names of Allah 3D Galaxy">
-							<span class="project-cat">Web</span>
+							<span class="project-cat">Full Stack</span>
 						</div>
 						<div class="project-body">
 							<h4>99 Names of Allah — 3D Galaxy</h4>
@@ -532,11 +574,11 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-ai filter-fullstack">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/resume.jpg" alt="Resume Intelligence Platform">
-							<span class="project-cat">AI / ML</span>
+							<span class="project-cat">AI / RAG</span>
 						</div>
 						<div class="project-body">
 							<h4>Resume Intelligence Platform</h4>
@@ -553,11 +595,11 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-fullstack">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/musicplayer.jpg" alt="ReelRoom Movie App">
-							<span class="project-cat">Web</span>
+							<span class="project-cat">Full Stack</span>
 						</div>
 						<div class="project-body">
 							<h4>ReelRoom Movie App</h4>
@@ -574,11 +616,11 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-fullstack filter-cloud">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/gan.jpg" alt="Suncloud Labs Platform">
-							<span class="project-cat">Web</span>
+							<span class="project-cat">Cloud &amp; DevOps</span>
 						</div>
 						<div class="project-body">
 							<h4>Suncloud Labs Platform</h4>
@@ -594,7 +636,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-backend filter-data">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/iras.jpeg" alt="Places Finder with PostGIS">
@@ -615,11 +657,11 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-ai filter-backend">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/recommender.jpg" alt="Multimodal Product Recommender">
-							<span class="project-cat">AI / ML</span>
+							<span class="project-cat">AI / RAG</span>
 						</div>
 						<div class="project-body">
 							<h4>Multimodal Product Recommender</h4>
@@ -635,11 +677,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-data filter-backend">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/twitteranalysis.jpg" alt="Elasticsearch to Postgres">
-							<span class="project-cat">Backend</span>
+							<span class="project-cat">Data Engineering</span>
 						</div>
 						<div class="project-body">
 							<h4>Elasticsearch to Postgres</h4>
@@ -654,11 +696,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-ai filter-backend">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/ml.jpg" alt="FastAPI RAG Chatbot">
-							<span class="project-cat">AI / ML</span>
+							<span class="project-cat">AI / RAG</span>
 						</div>
 						<div class="project-body">
 							<h4>FastAPI RAG Chatbot</h4>
@@ -674,7 +716,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-backend filter-ai">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/mcp.jpg" alt="DeepL FastMCP Python Server">
@@ -694,11 +736,11 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+				<div class="col-lg-4 col-md-6 portfolio-item filter-data filter-backend">
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/blog.jpg" alt="Kafka Zero to Hero">
-							<span class="project-cat">Backend</span>
+							<span class="project-cat">Data Engineering</span>
 						</div>
 						<div class="project-body">
 							<h4>Kafka Zero to Hero</h4>
@@ -740,7 +782,7 @@
 					<div class="project-card">
 						<div class="project-thumb">
 							<img src="assets/img/project/recommender.jpg" alt="Movie Recommender">
-							<span class="project-cat">AI / ML</span>
+							<span class="project-cat">AI / RAG</span>
 						</div>
 						<div class="project-body">
 							<h4>Movie Recommender</h4>
@@ -773,63 +815,90 @@
 				<div class="col-lg-12" data-aos="fade-up">
 					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
 						style="background:#fff">
-						<h4 style="text-align:left;color:#09203a">Languages and Databases</h4>
+						<h4 style="text-align:left;color:#09203a">Backend Engineering</h4>
 						<p style="text-align:left;">
 							<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-							<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-							<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
-							<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-							<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-							<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-							<img src="https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white" alt="Elasticsearch">
-						</p>
-					</div>
-					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100"
-						style="background:#fff">
-						<h4 style="text-align:left;color:#09203a">Frameworks</h4>
-						<p style="text-align:left;">
 							<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
-							<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
 							<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django">
-							<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
-							<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
-							<img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express">
+							<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
 							<img src="https://img.shields.io/badge/gRPC-244C5A?style=for-the-badge&logo=grpc&logoColor=white" alt="gRPC">
+							<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+							<img src="https://img.shields.io/badge/REST%20APIs-005571?style=for-the-badge&logo=fastapi&logoColor=white" alt="REST APIs">
+							<img src="https://img.shields.io/badge/Microservices-4B5563?style=for-the-badge&logo=goland&logoColor=white" alt="Microservices">
 						</p>
 					</div>
 					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100"
 						style="background:#fff">
-						<h4 style="text-align:left;color:#09203a">Tools</h4>
+						<h4 style="text-align:left;color:#09203a">Data &amp; Storage</h4>
 						<p style="text-align:left;">
-							<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-							<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-							<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS">
-							<img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Heroku">
-							<img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter">
-							<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+							<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+							<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+							<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis">
+							<img src="https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white" alt="Elasticsearch">
+							<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+							<img src="https://img.shields.io/badge/Impala-D22128?style=for-the-badge&logo=apache&logoColor=white" alt="Impala">
+						</p>
+					</div>
+					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100"
+						style="background:#fff">
+						<h4 style="text-align:left;color:#09203a">Distributed Systems</h4>
+						<p style="text-align:left;">
 							<img src="https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka">
+							<img src="https://img.shields.io/badge/Event--Driven%20Architecture-6E40C9?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Event-Driven Architecture">
+							<img src="https://img.shields.io/badge/Background%20Processing-0EA5E9?style=for-the-badge&logo=celery&logoColor=white" alt="Background Processing">
+							<img src="https://img.shields.io/badge/Caching-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Caching">
+							<img src="https://img.shields.io/badge/Rate%20Limiting-4B5563?style=for-the-badge&logo=redis&logoColor=white" alt="Rate Limiting">
 						</p>
 					</div>
 					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
 						style="background:#fff">
-						<h4 style="text-align:left;color:#09203a">DevOps &amp; Cloud Native</h4>
+						<h4 style="text-align:left;color:#09203a">Cloud &amp; DevOps</h4>
 						<p style="text-align:left;">
+							<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS">
+							<img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud">
+							<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
 							<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes">
 							<img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform">
 							<img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible">
 							<img src="https://img.shields.io/badge/Argo%20CD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white" alt="Argo CD">
-							<img src="https://img.shields.io/badge/ELK%20Stack-005571?style=for-the-badge&logo=elasticstack&logoColor=white" alt="ELK Stack">
+							<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions">
+							<img src="https://img.shields.io/badge/CI%2FCD-4B5563?style=for-the-badge&logo=githubactions&logoColor=white" alt="CI/CD">
 						</p>
 					</div>
 					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
 						style="background:#fff">
-						<h4 style="text-align:left;color:#09203a">AI, Search &amp; Geospatial</h4>
+						<h4 style="text-align:left;color:#09203a">AI / LLM Engineering</h4>
 						<p style="text-align:left;">
 							<img src="https://img.shields.io/badge/RAG-412991?style=for-the-badge&logo=openai&logoColor=white" alt="RAG">
+							<img src="https://img.shields.io/badge/MCP-000000?style=for-the-badge&logo=anthropic&logoColor=white" alt="MCP">
+							<img src="https://img.shields.io/badge/Embeddings-5A45FF?style=for-the-badge&logo=openai&logoColor=white" alt="Embeddings">
 							<img src="https://img.shields.io/badge/Vector%20Search-4B8BBE?style=for-the-badge&logo=databricks&logoColor=white" alt="Vector Search">
 							<img src="https://img.shields.io/badge/Semantic%20Search-2E8B57?style=for-the-badge&logo=elasticsearch&logoColor=white" alt="Semantic Search">
 							<img src="https://img.shields.io/badge/pgvector-008bb9?style=for-the-badge&logo=postgresql&logoColor=white" alt="pgvector">
 							<img src="https://img.shields.io/badge/PostGIS-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostGIS">
+						</p>
+					</div>
+					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
+						style="background:#fff">
+						<h4 style="text-align:left;color:#09203a">Frontend</h4>
+						<p style="text-align:left;">
+							<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+							<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+							<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+							<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+							<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+						</p>
+					</div>
+					<div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
+						style="background:#fff">
+						<h4 style="text-align:left;color:#09203a">Observability &amp; Testing</h4>
+						<p style="text-align:left;">
+							<img src="https://img.shields.io/badge/ELK%20Stack-005571?style=for-the-badge&logo=elasticstack&logoColor=white" alt="ELK Stack">
+							<img src="https://img.shields.io/badge/Datadog-632CA6?style=for-the-badge&logo=datadog&logoColor=white" alt="Datadog">
+							<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
+							<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+							<img src="https://img.shields.io/badge/Integration%20Testing-25A162?style=for-the-badge&logo=pytest&logoColor=white" alt="Integration Testing">
+							<img src="https://img.shields.io/badge/API%20Testing-4B5563?style=for-the-badge&logo=postman&logoColor=white" alt="API Testing">
 						</p>
 					</div>
 				</div>
@@ -837,6 +906,143 @@
 		</div>
 	</section>
 	<!-- End Skills Section -->
+
+
+	<!-- Start Resume Section -->
+	<section id="resume" class="services">
+		<div class="container">
+			<div class="section-title">
+				<h2>Resume</h2>
+			</div>
+
+			<div class="resume-toolbar" data-aos="fade-up">
+				<a href="#header" class="resume-btn" id="resumeBackBtn"><i class="bx bx-arrow-back"></i> Back to
+					Portfolio</a>
+				<a href="assets/Sany-Ahmed-Resume.pdf" download class="resume-btn primary"><i class="bx bx-download"></i>
+					Download PDF</a>
+				<button type="button" class="resume-btn" id="resumePrintBtn"><i class="bx bx-printer"></i> Print</button>
+			</div>
+
+			<div class="resume-sheet" data-aos="fade-up">
+				<div class="r-block">
+					<h3 class="r-sec">Professional Summary</h3>
+					<p class="r-summary">Senior Software Engineer with over 10 years of experience designing scalable
+						backend systems, microservices, and cloud-native applications. Skilled in Python, FastAPI,
+						JavaScript, PostgreSQL, Docker, Redis, AWS, REST, Terraform, gRPC, and data engineering. Proven
+						track record of developing high-performance APIs, cloud infrastructure, automated deployment
+						pipelines, and reliable data platforms.</p>
+				</div>
+
+				<div class="r-block">
+					<h3 class="r-sec">Technical Skills</h3>
+					<div class="r-skills">
+						<div class="r-skill"><span class="r-label">Languages</span><span class="r-val">Python, PHP,
+								JavaScript, SQL</span></div>
+						<div class="r-skill"><span class="r-label">Frameworks &amp; APIs</span><span class="r-val">FastAPI,
+								Flask, Django, React, gRPC, REST</span></div>
+						<div class="r-skill"><span class="r-label">Databases, Cache &amp; Search</span><span
+								class="r-val">PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, Apache Kafka, Impala</span>
+						</div>
+						<div class="r-skill"><span class="r-label">Cloud &amp; DevOps</span><span class="r-val">AWS (RDS,
+								S3, EC2, ECS, ECR, Lambda, CloudWatch, CloudFront, EventBridge, Athena, Redshift), GCP,
+								Docker, Kubernetes, Terraform, CI/CD, GitHub Actions</span></div>
+						<div class="r-skill"><span class="r-label">AI / LLM Engineering</span><span class="r-val">RAG, MCP,
+								Embeddings, Vector Search, Semantic Search, PgVector, PostGIS</span></div>
+						<div class="r-skill"><span class="r-label">Observability &amp; Testing</span><span
+								class="r-val">ELK Stack, Datadog, Git, Integration Testing, Functional Testing, API
+								Testing</span></div>
+					</div>
+				</div>
+
+				<div class="r-block">
+					<h3 class="r-sec">Professional Experience</h3>
+
+					<div class="r-job">
+						<div class="r-job-top">
+							<span class="r-job-title">Software Engineer L4 — Backend, <span class="r-company">Bitsware
+									Ltd</span></span>
+							<span class="r-dates">August 2025 – Present</span>
+						</div>
+						<ul>
+							<li>Developed and maintained Python-based cron jobs and batch-processing workflows, using
+								Quartz and BOB Monitor for job monitoring and operational troubleshooting.</li>
+							<li>Performed data migration and processing with Impala, Hadoop, Hue, and Python scripts,
+								including data transformation and validation.</li>
+						</ul>
+						<div class="r-stack"><strong>Tech Stack:</strong> Python, Flask, Oracle, SQL, Impala, Hadoop,
+							Hue, BOB Monitor, Cron Jobs, Data Migration</div>
+					</div>
+
+					<div class="r-job">
+						<div class="r-job-top">
+							<span class="r-job-title">Senior Software Engineer — Backend, <span class="r-company">Safara
+									(formerly Skipper)</span></span>
+							<span class="r-dates">May 2021 – July 2025</span>
+						</div>
+						<ul>
+							<li>Designed and delivered scalable backend services using Python, FastAPI, and gRPC, enabling
+								faster inter-service communication.</li>
+							<li>Implemented Redis-based API rate limiting and caching, improving application performance
+								and resilience under heavy traffic.</li>
+							<li>Developed microservices and serverless AWS Lambda workflows for media content processing.
+							</li>
+							<li>Built automated CI/CD pipelines with GitHub Actions to improve scalability and deployment
+								reliability.</li>
+						</ul>
+						<div class="r-stack"><strong>Tech Stack:</strong> Python, FastAPI, Django, gRPC, PostgreSQL,
+							Redis, Docker, Terraform, GitHub Actions, AWS (ECR, ECS, Lambda, RDS, ElastiCache, CloudWatch,
+							CloudFront, Route 53, DynamoDB, EventBridge)</div>
+					</div>
+
+					<div class="r-job">
+						<div class="r-job-top">
+							<span class="r-job-title">Senior Software Engineer — Backend, <span class="r-company">W3
+									Engineers Ltd.</span></span>
+							<span class="r-dates">Jan 2014 – Mar 2021</span>
+						</div>
+						<ul>
+							<li>Developed OZ, a high-volume analytics platform handling millions of events and
+								transactions.</li>
+							<li>Built a Search Tweaking System for location- and segment-based personalization, improving
+								user retention and search relevance.</li>
+							<li>Migrated search and analytics workloads from Elasticsearch to PostgreSQL, improving query
+								performance and reducing infrastructure costs by 23%.</li>
+							<li>Developed cron-based automation and ETL pipelines that power multiple high-traffic travel
+								websites via secure REST APIs.</li>
+						</ul>
+						<div class="r-stack"><strong>Tech Stack:</strong> PHP, JavaScript, Python, FastAPI, MySQL,
+							Elasticsearch, PostgreSQL, AWS (DynamoDB, RDS, S3, EC2, Athena, OpenSearch, Route 53,
+							ElastiCache, Redshift), Jira, Postman</div>
+					</div>
+
+					<div class="r-job">
+						<div class="r-job-top">
+							<span class="r-job-title">Junior Software Developer, <span class="r-company">Pirala
+									Inc.</span></span>
+							<span class="r-dates">Nov 2013 – Dec 2013</span>
+						</div>
+						<ul>
+							<li>Developed custom WordPress themes from scratch using HTML, CSS, PHP, and MySQL — delivering
+								responsive, high-performance websites.</li>
+							<li>Built and deployed a RESTful API with Node.js and Express.js for efficient internal data
+								integration.</li>
+							<li>Created an internal dashboard using PHP, JavaScript, and MySQL, giving stakeholders
+								real-time insights while optimizing database queries.</li>
+						</ul>
+						<div class="r-stack"><strong>Tech Stack:</strong> PHP, JavaScript, Node.js, Express.js, HTML, CSS,
+							MySQL, WordPress</div>
+					</div>
+				</div>
+
+				<div class="r-block">
+					<h3 class="r-sec">Education</h3>
+					<div class="r-job-title">B.Sc. in Computer Science <span class="r-dates">— CGPA 3.72</span></div>
+					<div class="r-stack">Jashore University of Science and Technology, Bangladesh</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Resume Section -->
 
 
 	<!-- Start Contact Section -->
@@ -944,15 +1150,16 @@
 	<script src="assets/vendor/typed.js/typed.min.js"></script>
 	<script type="text/javascript">
 		var typed = new Typed('.typing', {
-			strings: ["Learner", "Player", "Problem Solver", "Software Engineer", "Tech Enthusiast"],
+			strings: ["scalable backend systems", "cloud-native applications", "event-driven architectures", "high-performance APIs", "RAG &amp; AI systems"],
 			loop: true,
-			typeSpeed: 75,
-			backSpeed: 75
+			typeSpeed: 55,
+			backSpeed: 30,
+			backDelay: 1800
 		});
 	</script>
 
 	<!-- Template Main JS File -->
-	<script src="assets/js/main.js"></script>
+	<script src="assets/js/main.js?v=20260825"></script>
 
 </body>
 
