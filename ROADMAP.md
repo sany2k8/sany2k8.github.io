@@ -34,7 +34,7 @@ Backend / Full-Stack Engineer portfolio. Check items off as they ship.
 - [ ] Dark / Light theme toggle (CSS variables + localStorage)
 - [ ] Accessibility pass (keyboard nav, focus states, alt text, contrast, prefers-reduced-motion)
 - [ ] Performance (image optimization, lazy-load, font loading, Lighthouse)
-- [ ] SEO & social sharing (meta description, Open Graph, sharing image, sitemap, robots.txt)
+- [x] SEO & social sharing (title with name, Person schema, meta description, Open Graph, sitemap, robots.txt)
 
 ## Future
 - [ ] Engineering Notes / Blog

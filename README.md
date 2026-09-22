@@ -1,8 +1,23 @@
 # sany2k8.github.io
 
-This is my personal website. It is hosted on GitHub Pages.
+Personal portfolio of **Sany Ahmed** (Md Sany Ahmed), Senior Software Engineer.
 
 Website: https://sany2k8.github.io
+
+## Profiles
+
+These identities all refer to the same person. They should point back to this site and to each other.
+
+- Portfolio: https://sany2k8.github.io/
+- GitHub: https://github.com/sany2k8
+- GitHub (AlwaysSany): https://github.com/AlwaysSany
+- LinkedIn: https://www.linkedin.com/in/md-sany-ahmed-9ab00745/
+- Fiverr: https://www.fiverr.com/sany2k8
+- Stack Overflow: https://stackoverflow.com/users/1138192/always-sunny
+- LeetCode: https://leetcode.com/sany2k8dev/
+- Kaggle: https://www.kaggle.com/sany2k8
+- HackerRank: https://www.hackerrank.com/profile/sany2k8
+- Email: sany2k8@gmail.com
 
 ## How to run
 
